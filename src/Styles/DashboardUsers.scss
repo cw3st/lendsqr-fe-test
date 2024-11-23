@@ -1,0 +1,596 @@
+@import "../Variables/Variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.dashboard-users {
+  background-color: whitesmoke;
+  width: 80%;
+  font-family: "Work Sans";
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-left: 20px;
+  color: $blueColor;
+}
+
+.cumulation {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  width: 96%;
+}
+
+.cumulation-details {
+  background-color: $whiteColor;
+  width: 160px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cumulation-details img {
+  height: 38px;
+  width: 38px;
+}
+.cumulation-title {
+  font-size: $smallFont;
+  font-weight: 500;
+  color: $blackColor;
+  padding-top: 5px;
+}
+.cumulation-total {
+  font-size: 22px;
+  font-weight: 600;
+  color: $blueColor;
+  padding-top: 10px;
+}
+.user-list {
+  background-color: $whiteColor;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Flex layout for headers and details with specific widths for alignment */
+.user-list-header,
+.user-details {
+  display: flex;
+  margin: 0 20px;
+  padding: 10px 0;
+}
+
+/* Each column width should match across both header and details */
+.user-list-header div,
+.user-details div {
+  font-size: $smallFont;
+  font-weight: 400;
+  color: $blackColor;
+}
+
+.status-header {
+  margin-left: 20px;
+}
+
+/* Set specific widths for alignment */
+.user-list-header div:nth-child(1),
+.user-details div:nth-child(1) {
+  width: 15%; /* Adjust as needed */
+}
+
+.user-list-header div:nth-child(2),
+.user-details div:nth-child(2) {
+  width: 13%;
+}
+
+.user-list-header div:nth-child(3),
+.user-details div:nth-child(3) {
+  width: 20%;
+}
+
+.user-list-header div:nth-child(4),
+.user-details div:nth-child(4) {
+  width: 15%;
+}
+
+.user-list-header div:nth-child(5),
+.user-details div:nth-child(5) {
+  width: 16%;
+}
+
+.user-list-header div:nth-child(6),
+.user-details div:nth-child(6) {
+  width: 10%;
+}
+
+/* Styling for header specifically */
+.user-list-header {
+  font-weight: 600;
+  color: $blackColor;
+}
+
+.user-list-header div img {
+  height: 12px;
+  width: 12px;
+  margin-left: 10px;
+}
+
+/* Add subtle row separation for user details */
+.user-details {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 0;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #f0efef;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+}
+.status {
+  padding: 5px 0;
+  color: $whiteColor;
+  font-weight: 400;
+  border-radius: 10px;
+  text-align: center;
+  width: 50px;
+  margin-left: 20px;
+}
+.status.active {
+  color: #39cd62;
+  background-color: #39cd633a;
+}
+.status.inactive {
+  color: $blackColor;
+  background-color: #545f7d36;
+}
+.status.pending {
+  color: #e9b200;
+  background-color: #e9b30036;
+}
+.status.blacklisted {
+  color: #e4033b;
+  background-color: #e4033b33;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.pagination-info {
+  margin-left: 20px;
+}
+
+.pagination-info span {
+  color: $blackColor;
+  font-size: $regularFont;
+}
+
+.pagination-prev {
+  color: $blueColor;
+  border: none;
+  background-color: #21407d46;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+
+.pagination-next {
+  color: $blueColor;
+  border: none;
+  background-color: #21407d46;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+
+.current-page-button {
+  color: $blueColor;
+  border: none;
+  background-color: #21407d3f;
+  font-size: $regularFont;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.current-page-button-icon {
+  height: 10px;
+}
+
+.page-jump-dropdown form input {
+  width: 54px;
+  border: solid 2px #21407d3f;
+  border-radius: 3px;
+  outline: none;
+}
+.page-jump-dropdown form input::placeholder {
+  font-size: $smallFont;
+  color: $blackColor;
+  padding-left: 5px;
+}
+
+.page-jump-dropdown form button {
+  width: 46px;
+  background-color: $blueColor;
+  color: $whiteColor;
+  font-size: $smallFont;
+  border: none;
+  height: 21px;
+  border-radius: 3px;
+}
+
+.page-button {
+  background-color: whitesmoke;
+  border: none;
+  color: #21407d3f;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.page-button.active {
+  color: $blueColor;
+  font-weight: 600;
+}
+.page-button:hover:not(.active) {
+  color: $blueColor;
+  font-weight: 600;
+}
+.ellipsis {
+  padding: 0 8px;
+  color: #999;
+  font-size: 14px;
+  cursor: default;
+}
+.option-icon {
+  margin-left: 50px;
+  color: $blackColor;
+}
+
+.user-popup {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 150px;
+  z-index: 10;
+}
+
+.popup-option {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.popup-option:last-child {
+  border-bottom: none;
+}
+
+.popup-option:hover {
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 200px) and (max-width: 820px) {
+  .dashboard-users {
+    background-color: whitesmoke;
+    width: 100%;
+    font-family: "Work Sans";
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: $blueColor;
+  }
+
+  .cumulation {
+    margin-right: 0px;
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    width: 96%;
+  }
+
+  .cumulation-details {
+    background-color: $whiteColor;
+    width: 140px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .cumulation-details img {
+    height: 30px;
+    width: 30px;
+  }
+  .cumulation-title {
+    font-size: 9px;
+    font-weight: 500;
+    color: $blackColor;
+    padding-top: 5px;
+  }
+  .cumulation-total {
+    font-size: 18px;
+    font-weight: 600;
+    color: $blueColor;
+    padding-top: 10px;
+  }
+  .user-list {
+    background-color: $whiteColor;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .user-list-organization {
+    display: none;
+  }
+
+  .user-list-email {
+    display: none;
+  }
+
+  .user-list-phonenumber {
+    display: none;
+  }
+
+  .user-list-date {
+    display: none;
+  }
+
+  .user-list-username {
+    display: flex;
+  }
+
+  /* Flex layout for headers and details with specific widths for alignment */
+  .user-list-header,
+  .user-details {
+    display: flex;
+    margin: 0 20px;
+    padding: 10px 0;
+    justify-content: space-between;
+  }
+
+  /* Each column width should match across both header and details */
+  .user-list-header div,
+  .user-details div {
+    font-size: 9px;
+    font-weight: 400;
+    color: $blackColor;
+  }
+
+  .status-header {
+    margin-left: 0px;
+    display: flex;
+    margin-right: 50px;
+  }
+
+  /* Set specific widths for alignment */
+  .user-list-header div:nth-child(1),
+  .user-details div:nth-child(1) {
+    width: 15%; /* Adjust as needed */
+  }
+
+  .user-list-header div:nth-child(2),
+  .user-details div:nth-child(2) {
+    width: 30%;
+  }
+
+  .user-list-header div:nth-child(3),
+  .user-details div:nth-child(3) {
+    width: 20%;
+  }
+
+  .user-list-header div:nth-child(4),
+  .user-details div:nth-child(4) {
+    width: 15%;
+  }
+
+  .user-list-header div:nth-child(5),
+  .user-details div:nth-child(5) {
+    width: 16%;
+  }
+
+  .user-list-header div:nth-child(6),
+  .user-details div:nth-child(6) {
+    width: 35%;
+  }
+
+  /* Styling for header specifically */
+  .user-list-header {
+    font-weight: 600;
+    color: $blackColor;
+  }
+
+  .user-list-header div img {
+    height: 12px;
+    width: 12px;
+    margin-left: 10px;
+  }
+
+  /* Add subtle row separation for user details */
+  .user-details {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+  }
+
+  .bottom-border {
+    border-bottom: 1px solid #f0efef;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+  }
+  .status {
+    padding: 5px 0;
+    color: $whiteColor;
+    font-weight: 400;
+    border-radius: 10px;
+    text-align: center;
+    width: 50px;
+    margin-left: 40px;
+  }
+  .status.active {
+    color: #39cd62;
+    background-color: #39cd633a;
+  }
+  .status.inactive {
+    color: $blackColor;
+    background-color: #545f7d36;
+  }
+  .status.pending {
+    color: #e9b200;
+    background-color: #e9b30036;
+  }
+  .status.blacklisted {
+    color: #e4033b;
+    background-color: #e4033b33;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .pagination-info {
+    margin-left: 20px;
+  }
+
+  .pagination-info span {
+    color: $blackColor;
+    font-size: 10px;
+    display: none;
+  }
+
+  .pagination-prev {
+    color: $blueColor;
+    border: none;
+    background-color: #21407d46;
+    padding: 2px 5px;
+    border-radius: 2px;
+  }
+
+  .pagination-prev-button {
+    height: 10px;
+  }
+
+  .pagination-next {
+    color: $blueColor;
+    border: none;
+    background-color: #21407d46;
+    padding: 3px 5px;
+    border-radius: 2px;
+  }
+
+  .current-page-button {
+    color: $blueColor;
+    border: none;
+    background-color: #21407d3f;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+
+  .current-page-button-icon {
+    height: 8px;
+  }
+
+  .page-jump-dropdown form input {
+    width: 54px;
+    border: solid 2px #21407d3f;
+    border-radius: 3px;
+    outline: none;
+  }
+  .page-jump-dropdown form input::placeholder {
+    font-size: $smallFont;
+    color: $blackColor;
+    padding-left: 5px;
+  }
+
+  .page-jump-dropdown form button {
+    width: 46px;
+    background-color: $blueColor;
+    color: $whiteColor;
+    font-size: $smallFont;
+    border: none;
+    height: 21px;
+    border-radius: 3px;
+  }
+
+  .page-button {
+    background-color: whitesmoke;
+    border: none;
+    color: #21407d3f;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .page-button.active {
+    color: $blueColor;
+    font-weight: 600;
+  }
+  .page-button:hover:not(.active) {
+    color: $blueColor;
+    font-weight: 600;
+  }
+  .ellipsis {
+    padding: 0 8px;
+    color: #999;
+    font-size: 14px;
+    cursor: default;
+  }
+  .option-icon {
+    margin-left: 50px;
+    color: $blackColor;
+  }
+
+  .user-popup {
+    position: absolute;
+    top: 50%;
+    right: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 150px;
+    z-index: 10;
+  }
+
+  .popup-option {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .popup-option:last-child {
+    border-bottom: none;
+  }
+
+  .popup-option:hover {
+    background-color: #f9f9f9;
+  }
+}

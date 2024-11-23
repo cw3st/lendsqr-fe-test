@@ -1,0 +1,169 @@
+@import "../Variables/Variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.menubar {
+  background-color: $whiteColor;
+  width: 20%;
+  padding-bottom: 20px;
+  box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+.menu1 {
+  margin-left: 30px;
+  font-family: "Work Sans";
+  font-size: $regularFont;
+  padding-top: 30px;
+}
+.menu1-img1 {
+  height: $menubarIcon;
+}
+.menu1-img2 {
+  height: $menubarIcon;
+}
+
+.menu1 span {
+  padding-bottom: 20px;
+  margin: 0 20px;
+  color: $blueColor;
+  font-weight: 600;
+}
+.menu2 {
+  margin-left: 30px;
+  font-family: "Work Sans";
+  font-size: $regularFont;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+.menu2 img {
+  height: $menubarIcon;
+  margin-right: 20px;
+}
+.menu2 span {
+  color: $blueColor;
+}
+.menu-list1 {
+  padding-top: 20px;
+}
+.menu-heading1 {
+  font-family: "Work Sans";
+  font-size: $menubarHeading;
+  color: $blackColor;
+  font-weight: 400;
+  margin-left: 30px;
+}
+.menu-ul1 {
+  margin-top: 10px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.list:hover {
+  background: linear-gradient(to right, $greenColor 3%, #39cdcd4d 1%);
+}
+.selected {
+  background: linear-gradient(to right, $greenColor 3%, #39cdcd3a 1%);
+}
+.icon-container {
+  width: 24px;
+  margin-right: 10px;
+}
+.list img {
+  height: $menubarIcon;
+  max-width: 100%;
+}
+.list span {
+  font-family: "Work sans";
+  font-size: $regularFont;
+  font-weight: 400;
+  color: $blueColor;
+}
+
+@media (min-width: 200px) and (max-width: 820px) {
+  .menubar {
+    background-color: $whiteColor;
+    width: 20%;
+    padding-bottom: 20px;
+    box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    display: none;
+  }
+  .menu1 {
+    margin-left: 30px;
+    font-family: "Work Sans";
+    font-size: $regularFont;
+    padding-top: 30px;
+  }
+  .menu1-img1 {
+    height: $menubarIcon;
+  }
+  .menu1-img2 {
+    height: $menubarIcon;
+  }
+
+  .menu1 span {
+    padding-bottom: 20px;
+    margin: 0 20px;
+    color: $blueColor;
+    font-weight: 600;
+  }
+  .menu2 {
+    margin-left: 30px;
+    font-family: "Work Sans";
+    font-size: $regularFont;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .menu2 img {
+    height: $menubarIcon;
+    margin-right: 20px;
+  }
+  .menu2 span {
+    color: $blueColor;
+  }
+  .menu-list1 {
+    padding-top: 20px;
+  }
+  .menu-heading1 {
+    font-family: "Work Sans";
+    font-size: $menubarHeading;
+    color: $blackColor;
+    font-weight: 400;
+    margin-left: 30px;
+  }
+  .menu-ul1 {
+    margin-top: 10px;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  .list:hover {
+    background: linear-gradient(to right, $greenColor 3%, #39cdcd4d 1%);
+  }
+  .selected {
+    background: linear-gradient(to right, $greenColor 3%, #39cdcd3a 1%);
+  }
+  .icon-container {
+    width: 24px;
+    margin-right: 10px;
+  }
+  .list img {
+    height: $menubarIcon;
+    max-width: 100%;
+  }
+  .list span {
+    font-family: "Work sans";
+    font-size: $regularFont;
+    font-weight: 400;
+    color: $blueColor;
+  }
+}
