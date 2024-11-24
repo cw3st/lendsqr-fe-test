@@ -30,7 +30,7 @@ This is a simple front-end web application built with React, TypeScript, and Vit
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/your-username/lendsqr-fe-test.git
+   git clone https://github.com/cw3st/lendsqr-fe-test.git
 
 2. Navigate to the project directory:
 cd lendsqr-fe-test
